@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://patron12:patron12@pratiquewinner.hycac.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "MonsecetToken",
+    "githubClientId": "6d3a29ce20db23f5dbba",
+    "githubSecret": "1a0514e051d49b50658864ace8f6ae34fbfd316d"
+}
