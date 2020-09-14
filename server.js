@@ -6,11 +6,7 @@ const path = require('path');
 //connect to database
 connectDB();
 //init middleware
-app.use(
-  express.json({
-    extented: false,
-  })
-);
+app.use(express.json());
 
 //Define route
 app.use('/api/auth', require('./routes/api/auth'));
