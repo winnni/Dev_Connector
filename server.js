@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const app = express();
 const path = require('path');
-
+const publicPath = path.join(__dirname, '.', 'public');
 //connect to database
 connectDB();
 //init middleware
@@ -14,7 +14,13 @@ app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/users', require('./routes/api/users'));
 
+app.use(express.static(publicPath));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
+
 //Serve static assets in production
+/*
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
@@ -23,6 +29,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
+*/
 
 const PORT = process.env.PORT || 5000;
 
