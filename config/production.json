@@ -1,6 +1,5 @@
 {
-    "mongoURI": "mongodb+srv://patron12:patron12@pratiquewinner.hycac.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://patron1:patron1@winnershop.l5vwr.mongodb.net/<dbname>?retryWrites=true&w=majority",
     "jwtSecret": "MonsecetToken",
-    "githubClientId": "6d3a29ce20db23f5dbba",
-    "githubSecret": "1a0514e051d49b50658864ace8f6ae34fbfd316d"
+    "githubToken": "80d555e0279ab32133d02d6cf27e023b0c55a750"
 }
